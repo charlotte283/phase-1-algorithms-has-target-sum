@@ -1,10 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let numbers = {};
+  for (let i = 0; i < array.length; i++) {
+    let numbers = array[i];
+    if (target - numbers in numbers) {
+      return true;
+    }
+    numbers[array[i]] = i;
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  
 */
+O(n);
 
 /* 
   Add your pseudocode here
